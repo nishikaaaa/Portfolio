@@ -11,8 +11,15 @@ import Cursor from "../components/Cursor";
 import Navbar from "../components/Navbar";
 const VideoScrub = dynamic(() => import("../components/VideoScrub"), { ssr: false });
 import Hero from "../components/Hero";
+import TrustedBy from "../components/TrustedBy";
 import About from "../components/About";
+import Services from "../components/Services";
 import Work from "../components/Work";
+import WhyMe from "../components/WhyMe";
+import Process from "../components/Process";
+import Testimonials from "../components/Testimonials";
+import Faq from "../components/Faq";
+import Cta from "../components/Cta";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import SeoContent from "../components/SeoContent";
@@ -75,8 +82,15 @@ export default function Home() {
       {/* scrollable sections */}
       <div className="relative z-10">
         <Hero />
+        <TrustedBy />
         <About />
+        <Services />
         <Work />
+        <WhyMe />
+        <Process />
+        <Testimonials />
+        <Faq />
+        <Cta />
         <Contact />
         <div ref={footerRef}><Footer /></div>
       </div>

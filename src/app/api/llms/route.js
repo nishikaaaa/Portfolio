@@ -1,81 +1,58 @@
 import { NextResponse } from "next/server";
 
-/**
- * GET /api/llms
- * 
- * Machine-readable JSON endpoint for AI chatbots and LLM crawlers.
- * This supplements llms.txt with structured data that AI systems
- * can programmatically consume.
- */
 export async function GET() {
   const data = {
-    name: "Sarang",
-    title: "Portfolio Designer, Website Developer, Video Editor & Photo Editor",
+    name: "Nishika Sindhwani",
+    title: "Software Engineer",
     website: "https://sarang-space.site",
-    email: "sarangwalle@gmail.com",
-    location: "India",
-    available_for_hire: true,
+    email: "nishikasindhwanins@gmail.com",
+    location: "New Delhi, India",
+    education: {
+      degree: "B.Tech Computer Science Engineering",
+      college: "Guru Tegh Bahadur 4th Century Engineering College",
+      university: "Guru Gobind Singh Indraprastha University",
+      expectedGraduation: 2027,
+    },
     summary:
-      "Sarang is a freelance portfolio designer, website developer, video editor, and photo editor from India. He creates cinematic, immersive websites and digital experiences.",
-    
-    services: [
+      "Software engineer in New Delhi. She builds full-stack products and practical AI, with most of the work in backend systems and machine learning that has to live inside a real product.",
+    projects: [
       {
-        name: "Creative Web Development",
-        description: "Cinematic portfolio websites, interactive landing pages, immersive digital experiences with GSAP, Three.js, and Next.js",
-        technologies: ["React", "Next.js", "GSAP", "Three.js", "WebGL", "Tailwind CSS"],
+        name: "Shotkut",
+        description: "AI-powered stock footage platform. Current work is semantic search and video editing.",
+        technologies: ["FastAPI", "Node.js", "MongoDB", "Pinecone", "S3", "OpenAI"],
       },
       {
-        name: "Video Editing & Motion Design",
-        description: "Cinematic trailers, social media reels, motion graphics, and animated content",
-        technologies: ["After Effects", "Premiere Pro", "DaVinci Resolve", "CapCut"],
+        name: "Misinformation Detection",
+        description: "Detection software using language models, retrieval, OCR, and embeddings.",
+        technologies: ["LLMs", "RAG", "OCR", "Embeddings", "FastAPI", "Python", "MongoDB"],
       },
       {
-        name: "UI/UX & Visual Design",
-        description: "Modern interface design, brand identity, posters, and creative visual concepts",
-        technologies: ["Figma", "Photoshop", "Illustrator", "Lightroom"],
+        name: "SoulNest",
+        description: "Commerce software spanning the storefront and the API.",
+        technologies: ["Next.js", "FastAPI", "React", "TypeScript", "MySQL", "Redux Toolkit"],
       },
       {
-        name: "Shopify Development",
-        description: "Custom Shopify themes, e-commerce store setup and optimization",
-        technologies: ["Shopify Liquid", "JavaScript", "CSS"],
+        name: "LabBuddy",
+        description: "Healthcare marketplace. Internship work from frontend into the full stack, in production.",
+        technologies: ["Next.js", "React", "TypeScript", "Redux Toolkit", "FastAPI", "Python", "MySQL"],
       },
       {
-        name: "Flutter App Development",
-        description: "Cross-platform mobile applications for iOS and Android",
-        technologies: ["Flutter", "Dart"],
+        name: "SatQuery",
+        description: "Remote sensing with AI.",
+        technologies: ["Python"],
       },
     ],
-
     skills: {
-      frontend: ["React", "Next.js", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "GSAP", "Three.js", "WebGL"],
-      backend: ["Node.js", "Express", "Python", "PHP", "Go", "Rust"],
-      mobile: ["Flutter", "Dart", "Swift", "Kotlin"],
-      database: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase"],
-      creative: ["After Effects", "Premiere Pro", "DaVinci Resolve", "Figma", "Photoshop", "Illustrator", "Lightroom"],
-      devops: ["Git", "Docker", "Vercel", "Netlify"],
+      core: ["Next.js", "React", "TypeScript", "Python", "FastAPI", "Node.js", "Redux Toolkit", "MySQL", "MongoDB", "Git"],
+      appliedAi: ["OpenAI", "Embeddings", "RAG", "Pinecone", "OCR"],
     },
-
     experience: [
-      { role: "Freelance Developer", period: "2024–Present" },
-      { role: "Freelance Video Editor", period: "2022–Present" },
-      { role: "Freelance Photo Editor & Graphic Designer", period: "2020–Present" },
+      { role: "Started Computer Science", period: "2023" },
+      { role: "Joined LabBuddy", period: "2025" },
+      { role: "Built production healthcare software", period: "2025" },
+      { role: "Building AI products", period: "2026" },
+      { role: "Exploring intelligent systems", period: "Now" },
     ],
-
-    stats: {
-      websites_completed: "6+",
-      videos_edited: "75+",
-      photo_edits: "500+",
-    },
-
-    pages: {
-      home: "https://sarang-space.site/",
-      about: "https://sarang-space.site/about",
-      work: "https://sarang-space.site/work",
-      contact: "https://sarang-space.site/contact",
-    },
-
-    llms_txt: "https://sarang-space.site/llms.txt",
-    llms_full_txt: "https://sarang-space.site/llms-full.txt",
   };
 
   return NextResponse.json(data, {

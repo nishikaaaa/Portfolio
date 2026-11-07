@@ -211,10 +211,10 @@ export default function VideoScrub() {
   }, [isMobile, mounted]);
 
   const SECTION_IMAGES = [
-    { id: null,              src: '/photo/hero.webp'    }, // default / hero
-    { id: 'about-section',  src: '/photo/about.webp'   },
-    { id: 'work-section',   src: '/photo/project.webp' },
-    { id: 'contact-section', src: '/photo/contact.webp' },
+    { id: null,              src: '/photo/Timeline%201_01_00_00_00.jpg.jpeg' },
+    { id: 'about-section',   src: '/photo/Timeline%201_01_00_03_09.jpg.jpeg' },
+    { id: 'work-section',    src: '/photo/Timeline%201_01_00_06_06.jpg.jpeg' },
+    { id: 'contact-section', src: '/photo/Timeline%201_01_00_09_04.jpg.jpeg' },
   ];
 
   // Mobile scroll-driven state — updated directly via RAF, no React re-renders
@@ -313,7 +313,7 @@ export default function VideoScrub() {
         <div 
           className="absolute inset-0 w-full h-full opacity-60"
           style={{
-            backgroundImage: "url('/photo/hero.webp')",
+            backgroundImage: "url('/photo/Timeline%201_01_00_00_00.jpg.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center top",
           }}
@@ -361,11 +361,11 @@ export default function VideoScrub() {
   // Desktop: Full scroll-scrubbing video experience
   return (
     <div className="fixed inset-0 z-0 bg-[#0a0a0a]">
-      <video ref={fwdRef} src="/videos/optimized.mp4" poster="/photo/hero.webp"
+      <video ref={fwdRef} src="/videos/websitevideo_27635f0b_1080p.mp4" poster="/photo/Timeline%201_01_00_00_00.jpg.jpeg"
         className={cls} style={{ ...sty, opacity: 1 }}
         muted playsInline preload="metadata"
         aria-hidden="true" suppressHydrationWarning />
-      <video ref={revRef} src="/videos/optimized-rev.mp4"
+      <video ref={revRef} src="/videos/Nishika_rev.mp4"
         className={cls} style={{ ...sty, opacity: 0 }}
         muted playsInline preload="none"
         aria-hidden="true" suppressHydrationWarning />

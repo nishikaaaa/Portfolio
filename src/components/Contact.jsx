@@ -38,7 +38,7 @@ export default function Contact({ standalone = false }) {
       const fullNumber = selectedCC.code + phoneNumber;
       const myNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999';
       const msg = encodeURIComponent(
-        `Hi Sarang! My name is ${form.name}.\n\nReason: ${form.reason}\n\nMy number: +${fullNumber}`
+        `Hi Nishika! My name is ${form.name}.\n\nReason: ${form.reason}\n\nMy number: +${fullNumber}`
       );
       window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
       return;
@@ -92,13 +92,13 @@ export default function Contact({ standalone = false }) {
     <section
       id="contact-section"
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-center px-10 md:px-20 pt-24 md:pt-20 pb-24"
+      className="relative min-h-screen flex flex-col justify-center px-6 md:px-20 pt-24 md:pt-20 pb-24"
     >
       <p className="contact-label text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-12 font-medium">
         {SECTION.label}
       </p>
 
-      <div className="flex flex-col md:flex-row items-stretch gap-0 w-full max-w-7xl min-h-[65vh]">
+      <div className="flex flex-col-reverse md:flex-row items-stretch gap-0 w-full min-h-[65vh]">
 
         {/* LEFT — Form */}
         <div className="w-full md:w-[42%] pr-0 md:pr-12">
@@ -257,18 +257,22 @@ export default function Contact({ standalone = false }) {
         <div className="contact-divider hidden md:block w-px self-stretch bg-white/10 mx-8 origin-top" />
 
         {/* RIGHT — heading pinned to BOTTOM-RIGHT */}
-        <div className="w-full md:w-[58%] pl-0 md:pl-6 mt-16 md:mt-0 flex flex-col justify-end text-right">
+        <div className="w-full md:w-[58%] pl-0 md:pl-6 mb-12 md:mb-0 mt-0 flex flex-col justify-end text-left md:text-right items-start md:items-end">
           <h2
             className="contact-h font-black tracking-tighter leading-[0.88]"
             style={{ fontSize: "clamp(2.6rem, 5.5vw, 6.5rem)" }}
           >
-            <span className="block text-white">Let's build</span>
+            <span className="block text-white">Let&apos;s build</span>
             <span className="block text-white">something</span>
-            <span className="block ghost-orange">cool.</span>
+            <span className="block ghost-orange">lasting.</span>
           </h2>
-          <p className="contact-label mt-6 text-white/20 text-sm font-light leading-relaxed text-right">
-            Got a project in mind?<br />Drop your details and I'll get back to you.
+          <p className="contact-label mt-6 text-white/20 text-sm font-light leading-relaxed text-left md:text-right">
+            Send a note.<br />
+            I&apos;ll read it.
           </p>
+          <div className="contact-label mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs font-light text-white/40 justify-start md:justify-end w-full">
+            <a href="mailto:nishikasindhwanins@gmail.com" className="hover:text-[#ff6b1a] transition-colors duration-300">nishikasindhwanins@gmail.com</a>
+          </div>
         </div>
 
       </div>

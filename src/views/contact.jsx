@@ -36,7 +36,7 @@ export default function ContactPage() {
       const fullNumber = selectedCC.code + phoneNumber;
       const myNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
       const msg = encodeURIComponent(
-        `Hi Sarang! My name is ${form.name}.\n\nReason: ${form.reason}\n\nMy number: +${fullNumber}`
+        `Hi Nishika! My name is ${form.name}.\n\nReason: ${form.reason}\n\nMy number: +${fullNumber}`
       );
       window.open(`https://wa.me/${myNumber}?text=${msg}`, "_blank");
       return;
@@ -108,7 +108,7 @@ export default function ContactPage() {
         >
           <span className="block text-white">Let's build</span>
           <span className="block text-white">something</span>
-          <span className="block ghost-orange">cool.</span>
+          <span className="block ghost-orange">lasting.</span>
         </h1>
       </div>
 
@@ -264,10 +264,10 @@ export default function ContactPage() {
           >
             <span className="block text-white">Let's build</span>
             <span className="block text-white">something</span>
-            <span className="block ghost-orange">cool.</span>
+            <span className="block ghost-orange">lasting.</span>
           </h1>
           <p className="cp-label mt-6 text-white/20 text-sm font-light leading-relaxed text-right">
-            Got a project in mind?<br />Drop your details and I'll get back to you.
+            Send a note.<br />I'll read it.
           </p>
         </div>
 

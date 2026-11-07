@@ -130,7 +130,7 @@ export default function AddProjectPage() {
 
   const catLower = (form.category || "").toLowerCase();
   let titleLabel = "Project Title *";
-  let titlePlaceholder = "e.g. Creative Developer";
+  let titlePlaceholder = "e.g. Shotkut";
   let techLabel = "Tech stack";
   let techPlaceholder = "e.g. React · Next.js · GSAP";
 

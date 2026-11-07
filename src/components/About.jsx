@@ -56,13 +56,13 @@ export default function About({ standalone = false }) {
     <section
       id="about-section"
       ref={ref}
-      className={`relative w-full min-h-screen px-10 md:px-20 ${standalone ? "" : "z-20"}`}
+      className={`relative w-full min-h-screen px-6 md:px-20 ${standalone ? "" : "z-20"}`}
     >
       {standalone && (
         <div className="about-img absolute inset-0 z-0">
           <Image
-            src="/photo/about me.webp"
-            alt="Sarang"
+            src="/photo/Timeline 1_01_00_06_06.jpg.jpeg"
+            alt="Nishika Sindhwani"
             fill
             className="object-cover object-center"
             priority
@@ -117,15 +117,15 @@ export default function About({ standalone = false }) {
         </div>
 
         {/* Right Skills & Experience */}
-        <div className={`w-full lg:w-[40%] max-w-md mt-10 lg:mt-0 flex flex-col ${standalone ? "mr-auto lg:items-start lg:text-left" : "ml-auto items-end text-right"}`}>
+        <div className={`w-full lg:w-[40%] max-w-md mt-10 lg:mt-0 flex flex-col ${standalone ? "mr-auto lg:items-start lg:text-left" : "items-start text-left lg:ml-auto lg:items-end lg:text-right"}`}>
           <div className="about-p w-12 h-px bg-white/15 mb-8 lg:mb-10" />
 
           <div className="flex flex-col gap-10 w-full">
             <div className="w-full">
-              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-right"}`}>
-                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Tech I Work With</span>
+              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-left lg:text-right"}`}>
+                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Core Stack</span>
               </p>
-              <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-end"}`}>
+              <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-start lg:justify-end"}`}>
                 {TECH.map((s) => (
                   <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
                     <s.icon className="w-3 h-3 transition-all duration-300 fill-transparent stroke-current stroke-[1.5px] group-hover:fill-current group-hover:stroke-transparent" />
@@ -136,10 +136,10 @@ export default function About({ standalone = false }) {
             </div>
 
             <div className="w-full">
-              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-right"}`}>
-                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Creative Tools</span>
+              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-left lg:text-right"}`}>
+                <span className="border-b border-white/30 pb-2 inline-block text-white/50">Applied AI</span>
               </p>
-              <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-end"}`}>
+              <div className={`flex gap-2 flex-wrap ${standalone ? "justify-start" : "justify-start lg:justify-end"}`}>
                 {CREATIVE.map((s) => (
                   <span key={s.name} className="group about-skill px-4 py-2 flex items-center gap-2 border border-white/12 rounded-full text-[10px] text-white/35 tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-[#ff6b1a] hover:border-white cursor-default">
                     <s.icon className="w-3 h-3 transition-all duration-300 fill-transparent stroke-current stroke-[1.5px] group-hover:fill-current group-hover:stroke-transparent" />
@@ -150,10 +150,10 @@ export default function About({ standalone = false }) {
             </div>
 
             <div className="w-full">
-              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-right"}`}>
+              <p className={`about-p text-[10px] tracking-[0.4em] uppercase mb-6 ${standalone ? "text-left" : "text-left lg:text-right"}`}>
                 <span className="border-b border-white/30 pb-2 inline-block text-white/50">Experience</span>
               </p>
-              <div className={`flex flex-col gap-4 mt-2 ${standalone ? "items-start" : "items-end"}`}>
+              <div className={`flex flex-col gap-4 mt-2 ${standalone ? "items-start" : "items-start lg:items-end"}`}>
                 {EXPERIENCE.map((exp, i) => (
                   <div key={i} className="about-skill">
                     <p className="text-white/80 text-sm font-medium">{exp.role}</p>

@@ -1,8 +1,8 @@
 export default function manifest() {
   return {
-    name:             "Sarang — Creative Developer",
-    short_name:       "Sarang",
-    description:      "Cinematic digital experiences at the intersection of design and code.",
+    name:             "Nishika Sindhwani — Software Engineer",
+    short_name:       "Nishika",
+    description:      "Software engineer building full-stack products and practical AI.",
     start_url:        "/",
     display:          "standalone",
     background_color: "#080808",

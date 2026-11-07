@@ -4,9 +4,14 @@ import Link from "next/link";
 import { trackClick } from "@/lib/trackClick";
 
 const LINKS = [
-  { label: "About",   href: "/about"   },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Open Source", href: "/open-source" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
+
+const DEFAULT_SOCIALS = [];
 
 const SOCIAL_KEYS = [
   { key: "instagram", label: "Instagram" },
@@ -21,7 +26,7 @@ const SOCIAL_KEYS = [
 
 export default function Footer() {
   const ref = useRef(null);
-  const [socials, setSocials] = useState([]);
+  const [socials, setSocials] = useState(DEFAULT_SOCIALS);
 
   useEffect(() => {
     fetch("/api/settings?key=social_links")
@@ -61,7 +66,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={ref} className="relative border-t border-white/8 px-10 md:px-20 py-16">
+    <footer ref={ref} className="relative border-t border-white/8 px-6 md:px-20 py-16">
 
       {/* top row */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16">
@@ -69,13 +74,13 @@ export default function Footer() {
         {/* name + tagline */}
         <div>
           <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">
-            Creative Developer
+            Building Intelligent Systems.
           </p>
           <h2
             className="font-black tracking-tighter leading-[0.85]"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
           >
-            <span className="block text-white">Sarang</span>
+            <span className="block text-white">Nishika Sindhwani</span>
           </h2>
         </div>
 
@@ -117,14 +122,14 @@ export default function Footer() {
 
       {/* bottom row */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <p
-          className="text-[10px] text-white/20 tracking-widest"
-          style={{ fontFamily: '"Times New Roman", Times, serif', fontStyle: "italic" }}
+        <a
+          href="mailto:nishikasindhwanins@gmail.com"
+          className="text-[10px] text-white/20 hover:text-[#ff6b1a] tracking-widest font-serif italic transition-colors duration-300"
         >
-          sarangwalle@gmail.com
-        </p>
-        <p className="text-[10px] text-white/15 tracking-[0.3em] uppercase">
-          © {new Date().getFullYear()} Sarang Walle. All rights reserved.
+          nishikasindhwanins@gmail.com
+        </a>
+        <p className="text-[10px] text-white/15 tracking-[0.3em] uppercase" suppressHydrationWarning>
+          © {new Date().getFullYear()} Nishika Sindhwani. All rights reserved.
         </p>
       </div>
 

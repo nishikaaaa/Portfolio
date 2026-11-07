@@ -78,7 +78,7 @@ export default function ComingSoonPage() {
 
         {/* Name label */}
         <p className="text-[9px] md:text-[10px] text-[#ff6b1a] tracking-[0.6em] uppercase font-bold mb-6 md:mb-10">
-          Sarang
+          Nishika
         </p>
 
         {/* Heading */}
@@ -93,7 +93,7 @@ export default function ComingSoonPage() {
 
         {/* Subtext */}
         <p className="text-white/35 text-xs md:text-sm font-light max-w-xs md:max-w-sm mb-8 md:mb-12 leading-relaxed">
-          Something cinematic is being built.
+          The site is not public yet.
           <br />
           Leave your email to be the first to know.
         </p>

@@ -43,8 +43,8 @@ export default function AboutPage() {
       {/* Background image */}
       <div className="ap-img absolute inset-0 z-0 opacity-20">
         <Image
-          src="/photo/about me.webp"
-          alt="Sarang"
+          src="/photo/Timeline 1_01_00_06_06.jpg.jpeg"
+          alt="Nishika Sindhwani"
           fill
           className="object-cover object-center filter blur-md"
           priority
@@ -69,11 +69,11 @@ export default function AboutPage() {
 
         <div className="ap-card flex justify-center my-6">
           <ProfileCard
-            name="Sarang"
-            title="Creative Developer & Designer"
-            handle="sarang"
-            avatarUrl="/photo/Sarang.png"
-            miniAvatarUrl="/photo/Sarang.png"
+            name="Nishika Sindhwani"
+            title="Software Engineer"
+            handle="nishika"
+            avatarUrl="/photo/Timeline 1_01_00_06_06.jpg.jpeg"
+            miniAvatarUrl="/photo/Timeline 1_01_00_06_06.jpg.jpeg"
             showUserInfo={true}
             enableTilt={false}
             enableMobileTilt={false}
@@ -100,7 +100,7 @@ export default function AboutPage() {
         {/* Skills horizontal scroll */}
         <div className="space-y-4">
           <div>
-            <p className="ap-bio text-[9px] tracking-[0.4em] uppercase mb-3 text-white/45">Tech I Work With</p>
+            <p className="ap-bio text-[9px] tracking-[0.4em] uppercase mb-3 text-white/45">Core Stack</p>
             <div className="flex gap-1.5 overflow-x-auto pb-2 -mx-5 px-5 scrollbar-none">
               {TECH.map((s) => (
                 <span key={s.name} className="ap-skill flex-shrink-0 px-3 py-1 flex items-center gap-1 bg-white/95 rounded-full text-[8px] text-black tracking-wider uppercase font-medium">
@@ -110,7 +110,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div>
-            <p className="ap-bio text-[9px] tracking-[0.4em] uppercase mb-3 text-white/45">Creative Tools</p>
+            <p className="ap-bio text-[9px] tracking-[0.4em] uppercase mb-3 text-white/45">Applied AI</p>
             <div className="flex gap-1.5 overflow-x-auto pb-2 -mx-5 px-5 scrollbar-none">
               {CREATIVE.map((s) => (
                 <span key={s.name} className="ap-skill flex-shrink-0 px-3 py-1 flex items-center gap-1 bg-white/10 rounded-full text-[8px] text-white tracking-wider uppercase">
@@ -141,11 +141,11 @@ export default function AboutPage() {
           {/* Left: Interactive Studio Card (Sticky) */}
           <div className="ap-card flex justify-center items-start sticky top-[15vh]">
             <ProfileCard
-              name="Sarang"
-              title="Creative Developer & Designer"
-              handle="sarang"
-              avatarUrl="/photo/Sarang.png"
-              miniAvatarUrl="/photo/Sarang.png"
+              name="Nishika Sindhwani"
+              title="Software Engineer"
+              handle="nishika"
+              avatarUrl="/photo/Timeline 1_01_00_06_06.jpg.jpeg"
+              miniAvatarUrl="/photo/Timeline 1_01_00_06_06.jpg.jpeg"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -182,7 +182,7 @@ export default function AboutPage() {
         {/* Bottom: Skills & Experience Grid */}
         <div className="grid grid-cols-3 gap-12 pt-12 border-t border-white/10">
           <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[#ff6b1a]/80 font-medium">Tech I Work With</p>
+            <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[#ff6b1a]/80 font-medium">Core Stack</p>
             <div className="flex gap-2 flex-wrap">
               {TECH.map((s) => (
                 <span key={s.name} className="ap-skill px-3 py-1 flex items-center gap-1.5 bg-white/90 rounded-full text-[9px] text-black tracking-wider uppercase font-medium">
@@ -192,7 +192,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[#ff6b1a]/80 font-medium">Creative Tools</p>
+            <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[#ff6b1a]/80 font-medium">Applied AI</p>
             <div className="flex gap-2 flex-wrap">
               {CREATIVE.map((s) => (
                 <span key={s.name} className="ap-skill px-3 py-1 flex items-center gap-1.5 bg-white/10 rounded-full text-[9px] text-white tracking-wider uppercase font-medium border border-white/10">
